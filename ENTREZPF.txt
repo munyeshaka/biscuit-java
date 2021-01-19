@@ -1,0 +1,85 @@
+  static void  insert_entrezPF(entrezPF ent){
+        try{
+                            pstm = conn.prepareStatement(" INSERT INTO entrerpf                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        (Taille_StockMP,"
+ + " iduser_Utilisateur, id_ProduitsF,idstockPF_StockPF,dateEntrerPF_EntrerPF,qte_EntrerPF) VALUES (?,?,?,?,?); ");
+                            pstm.setInt(1, ent.getIduser_Utilisateur());
+                            pstm.setInt(2,ent.getId_ProduitsF());
+                            pstm.setInt(3, ent.getIdstockPF_StockPF());
+                            pstm.setString(4, ent.getDateEntrerPF_EntrerPF());
+                                pstm.executeUpdate();
+                                pstm.close();
+                            
+                        }catch(SQLException e){
+                            
+                        }
+        
+        
+    }
+      public static void deleteentrezpf(entrezPF cl){
+                try{
+            
+               conn  = DbConnection.getConnection();
+               stm = conn.createStatement();
+               
+                String SqlRe = "delete from entrezpf where iduser_Utilisateur ="+cl.getIduser_Utilisateur()+" and id_ProduitsF="+cl.getId_ProduitsF()
+                        +" and idstockPF_StockPF="+cl.getIdstockPF_StockPF()+"";
+                
+                   stm.executeUpdate(SqlRe);         
+
+                  }catch(SQLException e)
+                  {
+                     JOptionPane.showMessageDialog(null, "Veuillez entrer les valeurs valides!!!"+e.getLocalizedMessage()); 
+                  }
+      }
+//    
+//    static void update_entrezpf(entrezPF ent)
+//    {
+//        try {
+//            conn = DbConnection.getConnection();
+//            stm = conn.createStatement(); 
+//            String Requete="UPDATE entrerpf SET  ='"+st+"',"
+//                + " Taille_StockMP = '"+st.getTaille()+"',"
+//                + "adresse_StockMP ='"+st.getAdresse()+"',"
+//                + "description_StockMP ='"+st.getDescription()+"'"
+//                    +" WHERE idstockMP_StockMP  = '"+st.getIdstock()+"'  ";
+//                
+//                stm.executeUpdate(Requete);
+//            
+//        } catch (SQLException e) {
+//        }
+//        
+//    }
+    
+   /////////display///
+       public static ArrayList<entrezPF> displayENTREZPF(){
+           
+        ArrayList<entrezPF> listPF =new ArrayList();
+         entrezPF PF=null ;
+                        try {
+                                conn = DbConnection.getConnection();
+                                stm = conn.createStatement();
+                                rs = stm.executeQuery("SELECT * FROM ProduitsPF ORDER BY iduser_Utilisateur DESC");
+                                while(rs.next()){
+                                    PF= new entrezPF();
+                                    PF.setIduser_Utilisateur(rs.getInt("iduser_Utilisateur"));
+                                    PF.setId_ProduitsF(rs.getInt("id_ProduitsF"));
+                                    PF.setIdstockPF_StockPF(rs.getInt("idstockPF_StockPF"));
+                                   PF.setDateEntrerPF_EntrerPF(rs.getString("dateEntrerPF_EntrerPF"));
+                                   PF.setQte_EntrerPF(rs.getInt("qte_EntrerPF"));
+                                  
+                            
+                                    listPF.add(PF);
+                            
+                                }
+                                
+                                    
+                        } catch (SQLException e) {
+                                JOptionPane.showMessageDialog(null, "Probleme d'affichage du tableau ! " + e.getLocalizedMessage());
+                        }
+                        return listPF;
+                   
+            
+             }
+    
+    
+    }

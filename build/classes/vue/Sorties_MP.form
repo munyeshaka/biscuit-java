@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
+              <Component id="LblSortiesMP" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="414" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="13" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Component id="LblSortiesMP" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="890" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="BtnAjouter" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="BtnModifier" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="LblIdenUtilisateur" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LblDateEntree" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LblQteEntree" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LblIdenStockMP" min="-2" max="-2" attributes="0"/>
+                              <Component id="LblIdenProduit" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LblIdentMP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="BtnSupprimer" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                          <Component id="BtnQuitter" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="294" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="TxtDateEntree" max="32767" attributes="0"/>
+                              <Component id="TxtIdMP" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jComboIdMP" alignment="1" pref="88" max="32767" attributes="0"/>
+                              <Component id="jComboIdUtilisateur" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jComboIStockMP" max="32767" attributes="0"/>
+                              <Component id="TxtQteEntree" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="LblIdenStockMP" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jComboIStockMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LblIdenUtilisateur" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="jComboIdUtilisateur" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LblIdenProduit" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="jComboIdMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LblIdentMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TxtIdMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LblDateEntree" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="TxtDateEntree" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LblQteEntree" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="TxtQteEntree" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="BtnAjouter" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="BtnModifier" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="BtnSupprimer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="BtnQuitter" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="292" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="381" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="LblIdenProduit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identifiant du Produit"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LblIdenUtilisateur">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identifiant de l&apos;Utilisateur"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LblIdenStockMP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identifiant du Stock Mati&#xe8;res Premi&#xe8;res"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LblDateEntree">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date d&apos;entr&#xe9;e"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LblQteEntree">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quantit&#xe9; entr&#xe9;e"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtDateEntree">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtDateEntreeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtQteEntree">
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="TblEntr&#xe9;eMP">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="6" rowCount="4">
+                    <Column editable="true" title="Id Stock_MP" type="java.lang.Object"/>
+                    <Column editable="true" title="Id Utilisateur" type="java.lang.Object"/>
+                    <Column editable="true" title="Id Produit" type="java.lang.Object"/>
+                    <Column editable="false" title="Produit_MP" type="java.lang.Object"/>
+                    <Column editable="true" title=" Date d&apos;entr&#xe9;e" type="java.lang.Object"/>
+                    <Column editable="true" title="Quantite entr&#xe9;e" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="BtnAjouter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ajouter"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnAjouterActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnModifier">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modifier"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnSupprimer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Supprimer"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnQuitter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Retour"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnQuitterActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LblIdentMP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identifiant de la Mati&#xe8;re Premi&#xe8;re"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtIdMP">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtIdMPActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboIStockMP">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboIStockMPActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboIdUtilisateur">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboIdMP">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="LblSortiesMP">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Sorties des Mati&#xe8;res Premi&#xe8;res"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

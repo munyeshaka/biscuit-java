@@ -1,0 +1,264 @@
+    //************ commander **************//
+   
+    public static void insertcommander(Commander c){
+       // conn = DbConnection.getConnection();
+                try{
+                        conn = DbConnection.getConnection();
+                            pstm = conn.prepareStatement(" INSERT INTO commander (codeMP_ProduitMP,"
+                                    + " iduser_Utilisateur, datecde_commander, qte_commander) VALUES (?,?,?,?); ");
+                            
+                            pstm.setInt(1, c.getCodeMP());
+                            pstm.setInt(2, c.getIdUser());
+                            pstm.setDate(3, c.getDateCM());
+                            pstm.setInt(4, c.getQuantiteCM());
+
+                                pstm.executeUpdate();
+                                pstm.close();
+                            
+                        }catch(SQLException e){
+                            
+                        }
+    }
+    public static void updatecommander(Commander c){
+        try {
+            conn = DbConnection.getConnection();
+            stm = conn.createStatement(); 
+            String Requete="UPDATE commander SET "
+                + " datecde_commander ='"+c.getDateCM()+"',"
+                + "qte_commander='"+c.getQuantiteCM()+"',"
+                    + " WHERE codeMP_ProduitMP = '"+c.getCodeMP()+"' AND iduser_Utilisateur = '"+c.getIdUser()+"' ";
+                stm.executeUpdate(Requete);
+            
+        } catch (SQLException e) {
+        }
+        
+    
+    }
+    public static void deletecommander(Commander c){
+       
+        try {
+             conn = DbConnection.getConnection();
+            stm = conn.createStatement(); 
+            String Requete="delete from commander  WHERE codeMP_ProduitMP = '"+c.getCodeMP()+"' AND iduser_Utilisateur = '"+c.getIdUser()+"' ";
+            
+            stm.executeUpdate(Requete);
+            
+            
+        } catch (SQLException e) {
+        }
+           
+    }
+    public static ArrayList<Commander> displaycommander(){
+    
+            ArrayList<Commander> comm=new ArrayList();
+            Commander cm =null;
+                        try {
+                                conn = DbConnection.getConnection();
+                                stm = conn.createStatement();
+                                rs = stm.executeQuery("SELECT produitmp.codeMP_ProduitMP,utilisateur.iduser_Utilisateur,datecde_commander,"
+                                        + "qte_commander FROM utilisateur,profil,produitmp "
+                                        + "WHERE commander.iduser_Utilisateur= utilisateur.iduser_Utilisateur"
+                                        +" AND commander.codeMP_ProduitMP = produitmp.codeMP_ProduitMP");
+                                while(rs.next()){
+                                    cm=new Commander();
+//                                    ut.setCode(rs.getInt("iduser_Utilisateur"));
+                                    cm.setCodeMP(rs.getInt("codeMP_ProduitMP"));
+                                    cm.setIdUser(rs.getInt("iduser_Utilisateur"));
+                                    cm.setDateCM(rs.getDate("datecde_commander"));
+                                    cm.setQuantiteCM(rs.getInt("qte_commander"));
+                                    comm.add(cm);
+                            
+                                }
+                                
+                                    
+                        } catch (SQLException e) {
+                                JOptionPane.showMessageDialog(null, "Probleme d'affichage du tableau ! " + e.getLocalizedMessage());
+                        }
+                        return comm;
+                  
+    
+    }
+    
+    
+    //************ contenir **************//
+   
+    public static void insertcontenir(Contenir c){
+       // conn = DbConnection.getConnection();
+                try{
+                        conn = DbConnection.getConnection();
+                            pstm = conn.prepareStatement(" INSERT INTO contenir (id_ProduitsF,"
+                                    + " idCmdePF_CommandesPF, QtePF_contenir) VALUES (?,?,?); ");
+                            
+                            pstm.setInt(1, c.getIdPF());
+                            pstm.setInt(2, c.getIdComPF());
+                            pstm.setInt(3, c.getQtePF());
+
+                                pstm.executeUpdate();
+                                pstm.close();
+                            
+                        }catch(SQLException e){
+                            
+                        }
+    }
+    public static void updatecontenir(Contenir c){
+        try {
+            conn = DbConnection.getConnection();
+            stm = conn.createStatement(); 
+            String Requete="UPDATE contenir SET "
+                + "QtePF_contenir='"+c.getQtePF()+"',"
+                    + " WHERE id_ProduitsF = '"+c.getIdPF()+"' AND idCmdePF_CommandesPF = '"+c.getIdComPF()+"' ";
+                stm.executeUpdate(Requete);
+            
+        } catch (SQLException e) {
+        }
+        
+    
+    }
+    public static void deletecontenir(Contenir c){
+       
+        try {
+             conn = DbConnection.getConnection();
+            stm = conn.createStatement(); 
+            String Requete="delete from contenir WHERE id_ProduitsF = '"+c.getIdPF()+"' AND idCmdePF_CommandesPF = '"+c.getIdComPF()+"' ";
+            
+            stm.executeUpdate(Requete);
+            
+            
+        } catch (SQLException e) {
+        }
+           
+    }
+    public static ArrayList<Contenir> displaycontenir(){
+    
+            ArrayList<Contenir> cont=new ArrayList();
+            Contenir cm =null;
+                        try {
+                                conn = DbConnection.getConnection();
+                                stm = conn.createStatement();
+                                rs = stm.executeQuery("SELECT id_ProduitsF,idCmdePF_CommandesPF,QtePF_contenir,"
+                                        + "WHERE contenir.id_ProduitsF= produitsf.id_ProduitsF"
+                                        +" AND contenir.idCmdePF_CommandesPF = commandespf.idCmdePF_CommandesPF");
+                                while(rs.next()){
+                                    cm=new Contenir();
+//                                    ut.setCode(rs.getInt("iduser_Utilisateur"));
+                                    cm.setIdPF(rs.getInt("codeMP_ProduitMP"));
+                                    cm.setIdComPF(rs.getInt("iduser_Utilisateur"));
+                                    cm.setQtePF(rs.getInt("qte_commander"));
+                                    cont.add(cm);
+                            
+                                }
+                                
+                                    
+                        } catch (SQLException e) {
+                                JOptionPane.showMessageDialog(null, "Probleme d'affichage du tableau ! " + e.getLocalizedMessage());
+                        }
+                        return cont;
+                  
+    
+    }
+    
+
+
+/::::::::::::::://////////////
+
+model
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Modele;
+
+import java.sql.Date;
+
+/**
+ *
+ * @author tititofirakoze
+ */
+public class Commander {
+    
+    private int codeMP,idUser,quantiteCM;
+    private Date dateCM;
+
+    public int getCodeMP() {
+        return codeMP;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public int getQuantiteCM() {
+        return quantiteCM;
+    }
+
+    public Date getDateCM() {
+        return dateCM;
+    }
+
+    public void setCodeMP(int codeMP) {
+        this.codeMP = codeMP;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
+    public void setQuantiteCM(int quantiteCM) {
+        this.quantiteCM = quantiteCM;
+    }
+
+    public void setDateCM(Date dateCM) {
+        this.dateCM = dateCM;
+    }
+    
+    
+    
+}
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Modele;
+
+/**
+ *
+ * @author tititofirakoze
+ */
+public class Contenir {
+    private int idPF,idComPF,qtePF;
+    
+    public int getIdPF() {
+        return idPF;
+    }
+
+    public int getIdComPF() {
+        return idComPF;
+    }
+
+    public int getQtePF() {
+        return qtePF;
+    }
+
+    public void setIdPF(int idPF) {
+        this.idPF = idPF;
+    }
+
+    public void setIdComPF(int idComPF) {
+        this.idComPF = idComPF;
+    }
+
+    public void setQtePF(int qtePF) {
+        this.qtePF = qtePF;
+    }
+    
+    
+    
+}
+
+    
